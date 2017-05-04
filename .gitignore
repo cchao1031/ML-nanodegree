@@ -9,6 +9,8 @@ o
 # idea
 .idea/
 
+test.py
+
 # Distribution / packaging
 .Python
 env/
