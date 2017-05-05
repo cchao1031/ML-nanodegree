@@ -59,7 +59,7 @@ def cluster_results(reduced_data, preds, centers, pca_samples):
 	plot_data = pd.concat([predictions, reduced_data], axis = 1)
 
 	# Generate the cluster plot
-	fig, ax = plt.subplots(figsize = (14,8))
+	fig, ax = plt.subplots(figsize = (10,10))
 
 	# Color map
 	cmap = cm.get_cmap('gist_rainbow')
@@ -81,7 +81,8 @@ def cluster_results(reduced_data, preds, centers, pca_samples):
 	           s = 150, linewidth = 4, color = 'black', marker = 'x');
 	    ax.scatter(x = s[0], y = s[1], marker='$%d$'%(i), alpha = 1, s=100, color = 'white');
 
-
+	ax.set_xlim(-6,8)
+	ax.set_ylim(-6,8)
 	# Set plot title
 	ax.set_title("Cluster Learning on PCA-Reduced Data - Centroids Marked by Number\nTransformed Sample Data Marked by Black Cross");
 
