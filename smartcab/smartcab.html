@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>smartcab</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>smartcab</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11,8 +13,8 @@
 *
 */
 /*!
- * Bootstrap v3.3.7 (http://getbootstrap.com)
- * Copyright 2011-2016 Twitter, Inc.
+ * Bootstrap v3.3.6 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -1107,6 +1109,7 @@ a:focus {
   text-decoration: underline;
 }
 a:focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -2535,6 +2538,7 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -3025,6 +3029,7 @@ select[multiple].input-lg {
 .btn.focus,
 .btn:active.focus,
 .btn.active.focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -8755,9 +8760,6 @@ body > #header .header-bar {
     margin-left: 10px;
   }
 }
-[dir="rtl"] #ipython_notebook {
-  float: right !important;
-}
 #noscript {
   width: auto;
   padding-top: 16px;
@@ -8960,14 +8962,8 @@ span#login_widget > .button .badge,
  *
  * Author: Jupyter Development Team
  */
-[dir="rtl"] #tabs li {
-  float: right;
-}
 ul#tabs {
   margin-bottom: 4px;
-}
-[dir="rtl"] ul#tabs {
-  margin-right: 0px;
 }
 ul#tabs a {
   padding-top: 6px;
@@ -8990,16 +8986,6 @@ ul.breadcrumb span {
 }
 .list_toolbar .tree-buttons {
   padding-top: 1px;
-}
-[dir="rtl"] .list_toolbar .tree-buttons {
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-right {
-  padding-top: 1px;
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-left {
-  float: right !important;
 }
 .dynamic-buttons {
   padding-top: 3px;
@@ -9136,9 +9122,6 @@ ul.breadcrumb span {
 #tree-selector {
   padding-right: 0px;
 }
-[dir="rtl"] #tree-selector a {
-  float: right;
-}
 #button-select-all {
   min-width: 50px;
 }
@@ -9228,9 +9211,6 @@ ul#new-menu {
   left: auto;
   right: 0;
 }
-[dir="rtl"] #new-menu {
-  text-align: right;
-}
 .kernel-menu-icon {
   padding-right: 12px;
   width: 24px;
@@ -9275,9 +9255,6 @@ ul#new-menu {
 }
 #running .panel-group .panel .panel-body .list_container .list_item:last-child {
   border-bottom: 0px;
-}
-[dir="rtl"] #running .col-sm-8 {
-  float: right !important;
 }
 .delete-button {
   display: none;
@@ -9574,7 +9551,6 @@ div.cell.selected.jupyter-soft-selected {
   }
 }
 div.inner_cell {
-  min-width: 0;
   /* Old browsers */
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -9595,6 +9571,11 @@ div.inner_cell {
   box-flex: 1;
   /* Modern browsers */
   flex: 1;
+}
+@-moz-document url-prefix() {
+  div.inner_cell {
+    overflow-x: hidden;
+  }
 }
 /* input_area and input_prompt must match in top border and margin for alignment */
 div.input_area {
@@ -11265,7 +11246,7 @@ div#pager .ui-resizable-handle::after {
 }
 .shortcut_key {
   display: inline-block;
-  width: 21ex;
+  width: 20ex;
   text-align: right;
   font-family: monospace;
 }
@@ -11577,7 +11558,6 @@ ul.typeahead-list > li > a {
   box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
 }
 .terminal-app .terminal {
-  width: 100%;
   float: left;
   font-family: monospace;
   color: white;
@@ -11591,9 +11571,6 @@ ul.typeahead-list > li > a {
 .terminal-app .terminal dummy-screen {
   line-height: 1em;
   font-size: 14px;
-}
-.terminal-app .terminal .xterm-rows {
-  padding: 10px;
 }
 .terminal-app .terminal-cursor {
   color: black;
@@ -11654,10 +11631,8 @@ ul.typeahead-list > li > a {
 .highlight .mh { color: #666666 } /* Literal.Number.Hex */
 .highlight .mi { color: #666666 } /* Literal.Number.Integer */
 .highlight .mo { color: #666666 } /* Literal.Number.Oct */
-.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
 .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
 .highlight .sc { color: #BA2121 } /* Literal.String.Char */
-.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
 .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
@@ -11668,11 +11643,9 @@ ul.typeahead-list > li > a {
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.highlight .fm { color: #0000FF } /* Name.Function.Magic */
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
-.highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
@@ -11932,7 +11905,7 @@ div#notebook {
 <ul>
 <li>learning 决定智能体是否要进行学习；epsilon 用于trade-off探索与利用，epsilon越大越倾向于探索；alpha 学习速率，alpha越大则倾向于在每次更新中学习更多的信息。</li>
 <li>act函数。</li>
-<li>是否显示图形展示界面，render_text()不显示，render()显示。</li>
+<li>render_text()不显示图形展示界面，但会将训练信息打印在终端上，包括上一个状态，所发生的状况，得分，以及剩余时间；render()显示图形展示界面，同时打印了信息在终端上。</li>
 <li>先考虑东西方向。</li>
 </ul>
 
@@ -11985,9 +11958,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -13153,7 +13124,7 @@ BMvMzMzMzKxKnGCZmZmZmZlVyf8HTgo2Cqg/76YAAAAASUVORK5CYII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>回答：</strong> 
-waypoint 和 inputs用于学习安全性和效率相关性高，选择正确的方向可以提高效率，判断交通灯颜色以及周围车况可以避免事故。deadline只能告诉我们还剩多少时间可以到达目的地，在智能体能够又好又快地到达目的地的前提下，deadline其实用处不大。</p>
+waypoint给出应该驶向的方向与效率相关性高，inputs给出车辆周围的环境信息与安全性相关性高。deadline只能告诉我们还剩多少时间可以到达目的地，在智能体能够又好又快地到达目的地的前提下，deadline其实用处不大。并且deadline的加入会极大的增加状态空间，这将意味着很有可能有很多状态下的最佳策略无法被学习。</p>
 
 </div>
 </div>
@@ -13264,9 +13235,7 @@ $$ \epsilon_{t+1} = \epsilon_{t} - 0.05, \hspace{10px}\textrm{for trial number }
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -14798,9 +14767,7 @@ $$ \epsilon = a^t, \textrm{for } 0 < a < 1 \hspace{50px}\epsilon = \frac{1}{t^2}
 <div class="output">
 
 
-<div class="output_area">
-<div class="prompt"></div>
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -16539,7 +16506,7 @@ zKxKnGCZmZmZmZlViRMsMzMzMzOzKvlfX1ggKt1XsiEAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-8">&#38382;&#39064; 8<a class="anchor-link" href="#&#38382;&#39064;-8">&#182;</a></h3><p>给出几个关于最优策略是什么样子的例子（用你已定义的状态）。之后，查看<code>'sim_improved-learning.txt'</code>文本文件，看你的改进的Q-Learning算法的结果。<em>每个从模拟中纪录的状态，对于给定的状态，<strong>策略</strong>（得分最高的动作）是否正确？是否对于有些状态，有策略不同于预期的最优策略？</em>给出一个状态和记录的状态-动作的奖励，解释为什么正是个正确的策略。</p>
+<h3 id="&#38382;&#39064;-8">&#38382;&#39064; 8<a class="anchor-link" href="#&#38382;&#39064;-8">&#182;</a></h3><p>给出几个关于最优策略是什么样子的例子（用你已定义的状态）。之后，查看<code>'sim_improved-learning.txt'</code>文本文件，看你的改进的Q-Learning算法的结果。_每个从模拟中纪录的状态，对于给定的状态，<strong>策略</strong>（得分最高的动作）是否正确？是否对于有些状态，有策略不同于预期的最优策略？_给出一个状态和记录的状态-动作的奖励，解释为什么正是个正确的策略。</p>
 
 </div>
 </div>
@@ -16555,7 +16522,7 @@ zKxKnGCZmZmZmZlViRMsMzMzMzOzKvlfX1ggKt1XsiEAAAAASUVORK5CYII=
  -- None : -5.29
  -- right : -0.26
  -- left : -19.81</p>
-<p>对于这个状态-动作奖励，我们可以发现小车目前状态为希望向左转，眼前为绿灯，交叉驶来一辆车想要直行。在观察动作奖励，因为是绿灯，如果我们不采取动作，那么会轻微影响交通，可见是一个负的得分，如果我们右转，不会产生事故或影响交通，但可能一定程度上会导致无法在规定时间内到达目的地，于是给出一个较小的负得分，如果我们立刻左转，那么很有可能会造成与交叉前来的车辆造成轻微事故，造成较大的负得分，通常在对面有来车直行的情况下是要转弯让直行的，这与我们的常识也相符合。</p>
+<p>对于这个状态-动作奖励，我们可以发现小车目前状态为希望向左转，眼前为绿灯，交叉驶来一辆车想要直行。在观察动作奖励，因为是绿灯，如果我们不采取动作，那么会轻微影响交通，可见是一个负的得分，如果我们右转，不会产生事故或影响交通，但可能一定程度上会导致无法在规定时间内到达目的地，于是给出一个较小的负得分，如果我们立刻左转，那么很有可能会造成与交叉前来的车辆造成轻微事故，造成较大的负得分，通常在对面有来车直行的情况下是要转弯让直行的，这与我们的常识也相符合。所以我认为这是一个最优策略。</p>
 
 </div>
 </div>
@@ -16587,9 +16554,6 @@ zKxKnGCZmZmZmZlViRMsMzMzMzOzKvlfX1ggKt1XsiEAAAAASUVORK5CYII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>回答：</strong></p>
-<ul>
-<li>reviewer可否给出一些提示。</li>
-</ul>
 
 </div>
 </div>
@@ -16608,8 +16572,4 @@ zKxKnGCZmZmZmZlViRMsMzMzMzOzKvlfX1ggKt1XsiEAAAAASUVORK5CYII=
     </div>
   </div>
 </body>
-
- 
-
-
 </html>
