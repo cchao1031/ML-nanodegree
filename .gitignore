@@ -116,3 +116,8 @@ image_classification/preprocess_batch_4.p
 image_classification/preprocess_batch_5.p
 image_classification/preprocess_training.p
 image_classification/preprocess_validation.p
+
+State Farm Distracted Driver Detection/driver_imgs_list.csv
+State Farm Distracted Driver Detection/sample_submission.csv
+State Farm Distracted Driver Detection/test/
+State Farm Distracted Driver Detection/train/
