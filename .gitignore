@@ -118,7 +118,5 @@ image_classification/preprocess_training.p
 image_classification/preprocess_validation.p
 
 State Farm Distracted Driver Detection/data
-State Farm Distracted Driver Detection/data_info.png
 State Farm Distracted Driver Detection/model
-State Farm Distracted Driver Detection/submission/
 
